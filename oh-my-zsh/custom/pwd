@@ -1,0 +1,13 @@
+count(){
+echo "${PWD/#$HOME/~}" | wc -c | tr -d " "
+}
+pwd_length=14
+pwd_symbol="..."
+new_pwd="${PWD/#$HOME/~}"
+counter="$(count)"
+if [[ "$counter" -gt $pwd_length ]]
+then
+   echo "$new_pwd" | awk -F '/' '{print "/.../" $(NF-1) "/" $(NF)}'
+else
+	echo "$new_pwd"
+fi

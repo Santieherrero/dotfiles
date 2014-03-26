@@ -1,0 +1,23 @@
+# ruby/rails
+
+# zsh & dotfiles
+alias dotfiles="st ~/.dotfiles"
+alias zshconfig="st ~/.dotfiles/zshrc"
+alias ohmyzsh="st ~/.oh-my-zsh"
+
+# git
+alias g="git"
+alias gbr="git remote prune origin && git branch -r"
+
+# filesystem
+alias ..="cd ../"
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~='cd ~'
+alias o=$EDITOR
+alias ls="ls -G"
+alias mkdir="mkdir -p"
+
+# misc.
+alias timestamp="date +%Y%m%d%H%M%S"
+
