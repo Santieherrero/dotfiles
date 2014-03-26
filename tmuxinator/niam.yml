@@ -1,0 +1,34 @@
+# ~/.tmuxinator/niam.yml
+
+name: niam
+root: ~/Storage/Proyects/niamniam
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - specs:
+      layout: 15cd,272x62,0,0{135x62,0,0,19,136x62,136,0[136x31,136,0,20,136x30,136,32,23]}
+      panes:
+        - clear
+        - #empty
+        - #empty
+  - server: 
+      layout: 1a7d,272x62,0,0[272x31,0,0,22,272x30,0,32,25]
+      panes:
+        - routes:
+          - clear
+          - rake routes
+        - clear
