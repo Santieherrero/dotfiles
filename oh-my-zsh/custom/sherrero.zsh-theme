@@ -10,19 +10,13 @@ git_pt(){
 echo "\$(~/.oh-my-zsh/custom/git_prompt)"
 }
 # Get the current ruby version in use with RVM:
-if [ -e ~/.rvm/bin/rvm-prompt ]; then
-    RUBY_PROMPT_="$FG[196]\$(~/.rvm/bin/rvm-prompt s i v g)%{$reset_color%} "
-else
-  if which rbenv &> /dev/null; then
-    RUBY_PROMPT_="%{$fg_bold[blue]%}rbenv:(%{$fg[green]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg_bold[blue]%})%{$reset_color%}"
-  fi
-fi
 
+RUBY_PROMPT_=" $FG[196]\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} "
 HOST_PROMPT_="$FG[026]$USER@$HOST ➜  "
-GIT_PROMPT_="$(git_pt) % %{$reset_color%}"
+GIT_PROMPT="$(git_pt) % %{$reset_color%}"
 PATH_PROMPT_="$FG[202]$(path)"
 CHAR_PROMPT="$FG[196]∴ %{$reset_color%}"
-PROMPT="$HOST_PROMPT_$PATH_PROMPT_$GIT_PROMPT_$CHAR_PROMPT"
-RPROMPT="$RUBY_PROMPT_"
+PROMPT="$HOST_PROMPT_$PATH_PROMPT_$RUBY_PROMPT_$CHAR_PROMPT"
+RPROMPT="$GIT_PROMPT"
 
 

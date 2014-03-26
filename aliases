@@ -14,7 +14,6 @@ alias ..="cd ../"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ~='cd ~'
-alias o=$EDITOR
 alias ls="ls -G"
 alias mkdir="mkdir -p"
 

@@ -12,7 +12,8 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(brew rails sublime tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bin/tmuxinator.zsh
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export EDITOR='vim'
+export EDITOR='subl'
