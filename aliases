@@ -1,9 +1,18 @@
 # ruby/rails
+alias srspec="spring rspec"
+alias rs="rspec"
+alias rsf="rspec spec/features"
+alias spr="spring rails s"
+alias routes="rake routes"
 
 # zsh & dotfiles
 alias dotfiles="st ~/.dotfiles"
 alias zshconfig="st ~/.dotfiles/zshrc"
 alias ohmyzsh="st ~/.oh-my-zsh"
+
+#websites
+alias github="open http://github.com"
+
 
 # git
 alias g="git"
@@ -20,3 +29,9 @@ alias mkdir="mkdir -p"
 # misc.
 alias timestamp="date +%Y%m%d%H%M%S"
 
+#tmux
+alias niam="mux niam"
+alias work="mux workflow"
+alias dirig="mux dirig"
+alias tsession="tmux list-session"
+alias tkill="tmux kill-session -t"
