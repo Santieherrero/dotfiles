@@ -1,9 +1,11 @@
 # ruby/rails
 alias srspec="spring rspec"
-alias rs="rspec"
+alias rsp="rspec"
 alias rsf="rspec spec/features"
 alias spr="spring rails s"
 alias routes="rake routes"
+alias coverage="COVERAGE=true rspec"
+alias sandbox="rails c --sandbox"
 
 # zsh & dotfiles
 alias dotfiles="st ~/.dotfiles"
