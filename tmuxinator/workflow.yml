@@ -22,13 +22,13 @@ windows:
   - specs:
       layout: 15cd,272x62,0,0{135x62,0,0,19,136x62,136,0[136x31,136,0,20,136x30,136,32,23]}
       panes:
-        - clear
+        - # por determinar
         - #empty
         - #empty
   - server: 
       layout: 1a7d,272x62,0,0[272x31,0,0,22,272x30,0,32,25]
       panes:
         - routes:
-          - clear
-          - rake routes
-        - clear
+          - # por determinar
+          - # por determinar
+        - # por determinar
