@@ -16,3 +16,5 @@ lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 	default = simple
 [credential]
 	helper = osxkeychain
+[core]
+	editor = subl -n -w
