@@ -8,9 +8,9 @@ alias coverage="COVERAGE=true rspec"
 alias sandbox="rails c --sandbox"
 
 # zsh & dotfiles
-alias dotfiles="st ~/.dotfiles"
-alias zshconfig="st ~/.dotfiles/zshrc"
-alias ohmyzsh="st ~/.oh-my-zsh"
+alias dotfiles="subl ~/.dotfiles"
+alias zshconfig="subl ~/.dotfiles/zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #websites
 alias github="open http://github.com"

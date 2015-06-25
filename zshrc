@@ -17,3 +17,5 @@ source ~/.bin/tmuxinator.zsh
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR='subl'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
