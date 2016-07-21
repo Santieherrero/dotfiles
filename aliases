@@ -28,14 +28,18 @@ alias ....="cd ../../.."
 alias ~='cd ~'
 alias ls="ls -G"
 alias mkdir="mkdir -p"
+alias pwcp="pwd|pbcopy"
 
 # misc.
 alias timestamp="date +%Y%m%d%H%M%S"
 
 #tmux
+alias mux="tmuxinator"
 alias niam="mux niam"
+alias blog="mux blog"
 alias work="mux workflow"
 alias dirig="mux dirig"
 alias uni="mux Uni"
-alias tsession="tmux list-session"
+alias tml="tmux list-session"
+alias tma="tmux attach -t"
 alias tkill="tmux kill-session -t"
