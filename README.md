@@ -34,7 +34,7 @@ Many of the plugins from ohz that i use are on my [.zshrc](https://github.com/Sa
 
 ## Ohz Theme 
 
-[[https://github.com/Santieherrero/dotfiles/blob/master/images/zsh-prompt.png|alt=prompt-zsh]]
+![alt tag](https://github.com/Santieherrero/dotfiles/blob/master/images/zsh-prompt.png)
 
 
 ## Conclusion
