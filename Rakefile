@@ -2,6 +2,7 @@
 # Need improve Installer class and add methods for directories.
 # Dir.glob("oh-my-zsh/**/*")
 files = File.new(File.join(pwd, "FILES"), "r").read.split("\n")
+
 namespace :dot do
   desc "Install all dotfiles"
   task :install do
@@ -17,6 +18,7 @@ namespace :dot do
     end
   end
 end
+
 namespace :zsh do
     desc "Install oh my zsh"
   task :ohz_install do
@@ -36,7 +38,9 @@ def target_path(file)
 end
 
 #Depurar clase
+
 class Installer
+
   def symlink(target, link)
     if check_link(link)
       puts "Symlinking #{link} => #{target}"
@@ -65,6 +69,7 @@ class Installer
         check
       end
   end
+
   def replace_file(file)
     response = system %Q{rm -rf "#{file}"}
   end
@@ -100,12 +105,12 @@ end
 
 def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
-    puts "using zsh"
+    puts "Using zsh"
   else
-    print "switch to zsh? (recommended) [ynq] "
+    print "Switch to zsh? (recommended) [ynq] "
     case $stdin.gets.chomp
     when 'y'
-      puts "switching to zsh"
+      puts "Switching to zsh"
       system %Q{chsh -s `which zsh`}
     when 'q'
       exit
