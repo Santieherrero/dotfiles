@@ -1,6 +1,6 @@
 # Based on robbyrussell's and nebirhos's themes with user, host,path, rvm and git indicators. 
 # Example:
-# user@host ➜ /.../Proyects/ruby git: preview ( -+* ):439a2b1  ∴                                          ruby-2.1.0
+# user@host ➜ /.../Proyects/ruby ruby-version@gem-name ∴                                         ✗ ✚ ⚑ [ master ]:9101930
 # 
 
 path(){
