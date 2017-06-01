@@ -1,5 +1,7 @@
 # ruby/rails
 alias srspec="spring rspec"
+alias srsetup="rails db:drop db:create db:migrate db:seed"
+alias sprlocal="rvmsudo spring rails s -b 0.0.0.0"
 alias rsp="rspec"
 alias rsf="rspec spec/features"
 alias spr="spring rails s"
@@ -34,12 +36,17 @@ alias cl=clear
 
 # misc.
 alias timestamp="date +%Y-%m-%d/%H:%M:%S"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 #tmux
 alias mux="tmuxinator"
 alias blog="mux blog"
 alias work="mux workflow"
 alias uni="mux Uni"
+alias flame="mux flame"
 alias tml="tmux list-session"
 alias tma="tmux attach -t"
 alias tkill="tmux kill-session -t"
+
+# Rails Functions
+function rrg { rake routes | grep $1; }
