@@ -18,6 +18,11 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 #websites
 alias github="open http://github.com"
 
+#homebrew
+alias bsl="brew services list"
+alias bss="brew services start"
+alias bsrs="brew services restart"
+alias bst="brew services stop"
 
 # git
 alias g="git"
@@ -37,6 +42,9 @@ alias cl=clear
 # misc.
 alias timestamp="date +%Y-%m-%d/%H:%M:%S"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias rmspsql="rm -f /usr/local/var/postgres/postmaster.pid"
+alias qbackWall="cp -rf /Users/wall-e/Library/Mobile\ Documents/com\~apple\~CloudDocs/QuivShared/sherrero-quiv.qvlibrary /Users/wall-e/Dropbox/QuivShared/she-qviv.`date +%Y%m%d`.qvlibrary"
+alias qbackWork="cp -rf /Users/sherrero/Library/Mobile\ Documents/com\~apple\~CloudDocs/QuivShared/sherrero-quiv.qvlibrary /Users/sherrero/Dropbox/QuivShared/she-qviv.`date +%Y%m%d`.qvlibrary"
 
 #tmux
 alias mux="tmuxinator"
@@ -56,7 +64,7 @@ function mongorest {
 }
 
 function pgrest {
- ssh flame_worker "pg_dump flamedb -Ox -F t" | pg_restore -d flamedb -U sherrero -h localhost -Ox -v
+ ssh flame_data "pg_dump flamedb -Ox -F t" | pg_restore -d flamedb -U sherrero -h localhost -Ox -v
 }
 
 # General functions
