@@ -1,4 +1,4 @@
-# Last change: 26/June/2015
+# Last change: 05/Dec/2018
 
 # Make sure we’re using the latest Homebrew
 update
@@ -7,19 +7,47 @@ upgrade
 # See Doctor
 doctor
 
-
-
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
 install homebrew/dupes/grep
 
-# Install other useful binaries
-install git
-install imagemagick --with-webp
+# Core dev
 install gpg
+install cmake
 install zsh
 install tmux
+install reattach-to-user-namespace
 
+# packs
+install node
+# Python - Anaconda ???
+# install python3
+# install python@2
+# Net
+install openssl
+install openssl@1.1
+install openvpn
+
+install git
+install awscli
+install amazon-ecs-cli
+
+# db
+install mongodb
+install postgresql
+install timescaledb
+install redis
+install sqlite
+
+# Assets
+install imagemagick --with-webp
+install opencv@2
+
+# Tools
+install iproute2mac
+install nmap
+install qt@5.5
+install readline
 
 # Remove outdated versions from the cellar
 cleanup
