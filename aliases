@@ -62,45 +62,6 @@ function dockexec {
  docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti $1 /bin/bash
 }
 
-# Flame
-
-function mongorest {
-	ssh flame_data "mongodump -d flamedb --excludeCollection presence_probings_historical --excludeCollection heatmap_hours --excludeCollection presence_sessions_historical --excludeCollection wiggles.minute_wiggles --excludeCollection heatmap.raws --gzip --archive" | mongorestore -d flamedb --drop --gzip --archive
-}
-
-function mongorest_hours {
-	ssh flame_data "mongodump -d flamedb --excludeCollection presence_probings_historical --excludeCollection presence_sessions_historical --excludeCollection wiggles.minute_wiggles --excludeCollection heatmap.raws --gzip --archive" | mongorestore -d flamedb --drop --gzip --archive
-}
-
-function pgrest {
- ssh flame_data "pg_dump flamedb -Ox -F t --exclude-table-data=queues_real_time --exclude-table-data=shop_data_customer_interactions --exclude-table-data=affluence_real_time_predictions --exclude-table-data=sessions --exclude-table-data=shop_data_annotations --exclude-table-data=trajectories --exclude-table-data=occupation_stats --exclude-table-data=presence_session_hour_stats --exclude-table-data=lane_transactions --exclude-table-data=affluence_real_time_by_delta --exclude-table-data=queues_real_time_by_delta --exclude-table-data=node_trayectories --exclude-table-data=market_sales_items --exclude-table-data=recommended_lanes --exclude-table-data=presence_session_hour_stat_by_zones --exclude-table-data=trajectories_zones --exclude-table-data=queues_raw_data" | pg_restore -d flamedb -U sherrero -h localhost -Ox -v
-}
-
-function pgrestf {
-	ssh flame_data "pg_dump flamedb -Ox -F t --exclude-table-data=queues_real_time --exclude-table-data=shop_data_customer_interactions --exclude-table-data=affluence_real_time_predictions --exclude-table-data=sessions --exclude-table-data=shop_data_annotations --exclude-table-data=occupation_stats --exclude-table-data=presence_session_hour_stats --exclude-table-data=lane_transactions --exclude-table-data=affluence_real_time_by_delta --exclude-table-data=queues_real_time_by_delta --exclude-table-data=market_sales_items --exclude-table-data=recommended_lanes --exclude-table-data=queues_raw_data" | pg_restore -d flamedb -U sherrero -h localhost -Ox -v
-}
-
-function pgdump_file {
- ssh flame_data "pg_dump flamedb -Ox -F t" >> /Users/sherrero/Work/Flame/temps/dumps/flamedb_backup_`date +%d-%m-%Y`.sql
-}
-
-function pgrest_file {
- pg_restore -d flamedb -U sherrero -h localhost -Ox -v < /Users/sherrero/Work/Flame/temps/dumps/flamedb_backup_`date +%d-%m-%Y`.sql
-}
-
-function flamekl {
-	sudo kill -9 `cat /Users/sherrero/Work/Flame/flameapp/tmp/pids/server.pid`
-}
-
-function pushkl {
-	sudo kill -9 `cat /Users/sherrero/Work/Flame/push_api/tmp/pids/server.pid`
-}
-
-function pullkl {
-	sudo kill -9 `cat /Users/sherrero/Work/Flame/pull_api/tmp/pids/server.pid`
-}
-
-
 # General functions
 
 # Rails Functions
